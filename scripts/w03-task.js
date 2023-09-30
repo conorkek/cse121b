@@ -7,9 +7,9 @@ function add(number1, number2) {
 } 
 
 function addNumbers() {
-    let addNumber1 = Number(document.getElementById('add1').value);
-    let addNumber2 = Number(document.getElementById('add2').value);
-
+    let addNumber1 = parseInt(document.getElementById('add1').value);
+    let addNumber2 = parseInt(document.getElementById('add2').value);
+    
     document.getElementById('sum').value = add(addNumber1, addNumber2);
 }
 
@@ -21,8 +21,8 @@ function subtract(number1, number2) {
 }
 
 function subtractNumbers() {
-    let subtractNumber1 = Number(document.getElementById('subtract1').value);
-    let subtractNumber2 = Number(document.getElementById('subtract2').value);
+    let subtractNumber1 = parseInt(document.getElementById('subtract1').value);
+    let subtractNumber2 = parseInt(document.getElementById('subtract2').value);
 
     document.getElementById('difference').value = subtract(subtractNumber1, subtractNumber2)
 }
@@ -33,8 +33,8 @@ document.getElementById('subtractNumbers').addEventListener('click', subtractNum
 const multiply = (number1, number2) => number1 * number2;
 
 const multiplyNumbers = () => {
-    let multiplyNumber1 = Number(document.getElementById('factor1').value);
-    let multiplyNumber2 = Number(document.getElementById('factor2').value);
+    let multiplyNumber1 = parseInt(document.getElementById('factor1').value);
+    let multiplyNumber2 = parseInt(document.getElementById('factor2').value);
 
     document.getElementById('product').value = multiply(multiplyNumber1, multiplyNumber2);
 }
@@ -43,16 +43,12 @@ document.getElementById('multiplyNumbers').addEventListener('click', multiplyNum
 
 /* Open Function Use - Divide Numbers */
 function divide(number1, number2) {
-    if (number2 === 0) {
-        console.log('Division by zero is not allowed.');
-        return;
-    }
     return number1 / number2;
 }
 
 function divideNumbers() {
-    let divideNumbers1 = Number(document.getElementById('dividend').value);
-    let divideNumbers2 = Number(document.getElementById('divisor').value);
+    let divideNumbers1 = parseInt(document.getElementById('dividend').value);
+    let divideNumbers2 = parseInt(document.getElementById('divisor').value);
 
     document.getElementById('quotient').value = divide(divideNumbers1, divideNumbers2);
 }
@@ -66,26 +62,28 @@ let currentYear;
 
 currentYear = currentDate.getFullYear();
 
-document.getElementById('year').value = currentYear;
+document.getElementById('year').textContent = currentYear;
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
-document.getElementById('array').value = numbersArray;
+document.getElementById('array').innerHTML = numbersArray;
 
 /* Output Odds Only Array */
-document.getElementById('odds').innerHTML = numbersArray.filter(number => number % 2 === 1);
+document.getElementById('odds').innerHTML = numbersArray.filter(parseInt => parseInt % 2 === 1);
+
 /* Output Evens Only Array */
-document.getElementById('evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
+document.getElementById('evens').innerHTML = numbersArray.filter(parseInt => parseInt % 2 === 0);
+
 /* Output Sum of Org. Array */
 
-let sum = numbersArray.reduce(function(accumulator, currentValue) {
-    return accumulator + currentValue;
-}, 0);
-
-document.getElementById("sumOfArray").textContent = sum.toString();
+document.getElementById('sumOfArray').innerHTML = numbersArray.reduce((sum, parseInt) => sum + parseInt, 0);
 
 /* Output Multiplied by 2 Array */
 
+document.getElementById('multiplied').innerHTML = numbersArray.map(parseInt => parseInt * 2);
+
 /* Output Sum of Multiplied by 2 Array */
+
+document.getElementById('sumOfMultiplied').innerHTML = numbersArray.map(parseInt => parseInt * 2).reduce((sum, parseInt) => sum + parseInt, 0);
