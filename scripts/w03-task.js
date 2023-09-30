@@ -75,10 +75,16 @@ let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 document.getElementById('array').value = numbersArray;
 
 /* Output Odds Only Array */
-
+document.getElementById('odds').innerHTML = numbersArray.filter(number => number % 2 === 1);
 /* Output Evens Only Array */
-
+document.getElementById('evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
 /* Output Sum of Org. Array */
+
+let sum = numbersArray.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);
+
+document.getElementById("sumOfArray").textContent = sum.toString();
 
 /* Output Multiplied by 2 Array */
 
