@@ -41,14 +41,10 @@ input, select {
 #finalAmount h2 {
     font-size: 50px;
 }
- 
-.finalValue {
+
+h1, h2, .finalValue {
     font-family: 'Bungee Shade', cursive;
-    color:blue
-}
-h1, h2 {
-    font-family: 'Bungee Shade', cursive;
-    color:blue
+    color:rgba(0, 0, 255, 0.719)
 }
 
 @media (max-width: 768px) {
