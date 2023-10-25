@@ -1,11 +1,10 @@
 <html>
-
   <head>
-
-  <title>My first API script</title>
+  <title>Currency Converter</title>
   <link rel="stylesheet" href="styles/style.css">
   </head>
     <body>
+        <center>
       <!-- Currency Converter -->
       <h1 class="heading">
           Currency Converter
@@ -21,14 +20,14 @@
                   <input type="text" class="searchBox" placeholder="0.00" id="amount">
               </div>
               <div class="row">
-                  <div class="col">
+                  <div class="column">
                       <div class="input-group">
-                          <div class="input-prepend">
+                          <div class="input-add">
                               <span class="input-text">From</span>
                           </div>
-                          <select class="from" id="sel1">
-                              <!-- <option value="">Select One …</option> -->
-                              <!-- <option value="USD">USD</option>
+                          <select class="from" id="sell1">
+                              <option value="">Select One …</option>
+                              <option value="USD">USD</option>
                               <option value="AED">AED</option>
                               <option value="ARS">ARS</option>
                               <option value="AUD">AUD</option>
@@ -79,17 +78,17 @@
                               <option value="TWD">TWD</option>
                               <option value="UAH">UAH</option>
                               <option value="UYU">UYU</option>
-                              <option value="ZAR">ZAR</option> -->
+                              <option value="ZAR">ZAR</option>
                           </select>
                       </div>
                   </div>
    
-                  <div class="col">
+                  <div class="column">
                       <div class="input-group">
-                          <div class="input-prepend">
+                          <div class="input-add">
                               <span class="input-text">To</span>
                           </div>
-                          <select class="to" id="sel2">
+                          <select class="to" id="sell2">
                               <option value="">Select One …</option>
                               <option value="USD">USD</option>
                               <option value="AED">AED</option>
@@ -171,9 +170,9 @@
               </h2>
           </div>
       </div>
-   
+    </center>
       <!-- linking script.js file -->
-      <script type="module" src="scripts/script.js"></script>
+      <script src="scripts/script.js"></script>
     </body>
 
 </html>

@@ -53,11 +53,3 @@ function clearVal() {
     window.location.reload();
     document.getElementsByClassName("finalValue").innerHTML = "";
 };
-
-const countryCodes = object.keys(data.rates);
-
-// Use .map to create an array of HTML elements for each country code
-const countryElements = countryCodes.map((code) => `<option value=${code}>${code}</option>`).join('');
-
-// Insert the array into the HTML document
-document.getElementById('sel1').innerHTML = countryElements;

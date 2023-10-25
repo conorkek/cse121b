@@ -3,9 +3,8 @@ body {
     color: black;
     
 }
- 
 .heading {
-    font-family: 'Lobster', cursive;
+    font-family: 'Bungee Shade', cursive;
 }
  
 .main {
@@ -18,15 +17,23 @@ body {
 }
  
 label {
-    font-size: 20px;
+    font-size: 30px;
+    color: darkblue;
 }
- 
-.btn {
+option {
+    color: blue;
+}
+
+button {
     width: 200px;
+    color:blue
+}
+input, select {
+    color:blue
 }
  
 #finalAmount {
-    font-family: 'Lobster', cursive;
+    font-family: 'Bungee Shade', cursive;
     display: none;
     margin: 50px auto;
 }
@@ -36,8 +43,12 @@ label {
 }
  
 .finalValue {
-    font-family: 'Lobster', cursive;
-    color:black
+    font-family: 'Bungee Shade', cursive;
+    color:blue
+}
+h2 {
+    font-family: 'Bungee Shade', cursive;
+    color:blue
 }
 
 @media (max-width: 768px) {
